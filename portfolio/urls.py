@@ -26,6 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',jobs.views.home, name='home'),
     path('blog/',include(('blog.urls','blog'),namespace='blog')),
-
+    path('jobs/',include(('jobs.urls','jobs'),namespace='jobs')),
 
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
